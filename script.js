@@ -59,10 +59,6 @@ all_episodes.forEach(episode => {
  body.append(div)
 
   document.getElementById("mainContainer").style.columnCount = 3;
-//   <div class="container">
-//   <h1>My First Bootstrap Page</h1>
-//   <p>This is some text.</p>
-// </div>
 
 
 window.onload = setup;
