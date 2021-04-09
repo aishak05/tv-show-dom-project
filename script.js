@@ -1,10 +1,10 @@
 allEpisodes = null
 
-//You can edit ALL of the code here
-// function setup() {
-//   const allEpisodes = getAllEpisodes();
+// You can edit ALL of the code here
+function setup() {
+  const allEpisodes = getAllEpisodes();
  
-// }
+}
 
 // function makePageForEpisodes(episodeList) {
 // const rootElem = document.getElementById("root");
@@ -19,8 +19,16 @@ allEpisodes = null
 // }
 
 const body = document.body
+const searchDiv = document.createElement("div")
 const all_episodes = getAllEpisodes()
 const div =  document.createElement("div")
+const searchBar = document.createElement("form")
+const searchInput = document.createElement("input")
+body.append(searchDiv)
+searchDiv.append(searchBar)
+searchBar.append(searchInput)
+
+
 
 div.className='flex-container' 
 
@@ -87,5 +95,15 @@ alink.href = "http://tvmaze.com";
 disclaimer_div.appendChild(alink)
 
 body.append(disclaimer_div)
+
+// const searchList = all_episodes.filter(episode => episode.name);
+
+
+
+
+
+searchBar.addEventListener("keyup", e => { 
+  const searchString = e.target.value; 
+});
 
 window.onload = setup;
